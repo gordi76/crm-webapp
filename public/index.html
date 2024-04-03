@@ -10,6 +10,7 @@
         <!--  -->
     </header>
     <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <div class="top-bar">
         <div class="menu-toggle" onclick="toggleMenu()">&#9776</div>
         <div class="title">CRM-Dashboard</div>
@@ -38,10 +39,25 @@
     </div>
 
     <main>
-        <div class="dashboard-tile">
-            <h2>Title</h2>
-            <p>Beschreibung der Kachel</p>
-            <button>Weitere Details</button>
+        <div class="sales">
+            <div class="sales-tiles">
+                <h2>Sales</h2>
+                <!--<p>$754.251</p>-->
+                <button>$754.251</button>
+            </div>
+            <div class="sales-tiles">
+                <h2>Earnings</h2>
+                <button>$452.345</button>
+            </div>
+            <div class="sales-tiles">
+                <h2>Pending</h2>
+                <button>$354.654</button>
+            </div>
+        </div>
+
+        <div class="earning-report">
+            <h2>Earning Report</h2>
+            <canvas id="earningChart"></canvas>
         </div>
     </main>
 

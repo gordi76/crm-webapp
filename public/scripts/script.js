@@ -35,3 +35,32 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const earningsData = {
+        labels: ['January','February','March','April','May','June','July','August', 'September','October','November', 'December'],
+        datasets: [{
+            label: 'Earnings',
+            data: [2000, 1500, 1200, 1300, 2400, 1500, 1800, 1900, 1700, 2100, 2000, 1800],
+            fill: false,
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.1
+        }]
+    };
+
+    const chartOptions = {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    };
+
+    const earningChartElement = document.getElementById('earningChart');
+
+    const earningChart = new Chart(earningChartElement, {
+        type: 'line',
+        data: earningsData,
+        options: chartOptions
+    });
+});
