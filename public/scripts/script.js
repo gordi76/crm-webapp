@@ -6,10 +6,20 @@ function toggleMenu() {
 
     sidebar.style.left = targetLeft + 'px';
 }
-
 document.addEventListener('DOMContentLoaded', function () {
     var searchInput = document.getElementById('searchInput');
     var sidebarItems = document.querySelectorAll('.sidebar ul li');
+    var profileLink = document.getElementById('profileLink');
+    var profileDropdown = document.getElementById('profileDropdown');
+
+    profileLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (profileDropdown.style.display === 'block') {
+            profileDropdown.style.display = 'none';
+        } else {
+            profileDropdown.style.display = 'block';
+        }
+    });
 
     searchInput.addEventListener('input', function () {
         var searchTerm = searchInput.value.toLowerCase();
