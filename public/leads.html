@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>CRM-Dashboard</title>
-    <link rel="stylesheet" href="file:///styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 <header>
     <!--  -->
 </header>
-<script src="/scripts/script.js"></script>
+<script src="scripts/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <div class="top-bar">
     <div class="menu-toggle" onclick="toggleMenu()">&#9776</div>
@@ -38,6 +38,24 @@
     </ul>
 </div>
 <main>
+
+    <button id="openLeadFormBtn">Neuen Lead hinzufügen</button>
+
+    <div id="leadModal" class="modal">
+        <div id="modal-content">
+            <span class="close">&times</span>
+            <form id="leadForm">
+                <label for="firstName">Vorname:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <label for="lastName">Nachname:</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <!-- weitermachen -->
+
+                <button type="submit">Lead speichern</button>
+            </form>
+        </div>
+    </div>
 
 </main>
 

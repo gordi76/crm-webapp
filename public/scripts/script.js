@@ -64,3 +64,20 @@ document.addEventListener('DOMContentLoaded', function () {
         options: chartOptions
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+document.getElementById('openLeadFormBtn').addEventListener('click', function () {
+    document.getElementById('leadModal').style.display = 'block';
+});
+
+document.getElementsByClassName('close')[0].addEventListener('click', function () {
+    document.getElementById('leadModal').style.display = 'none';
+});
+
+document.getElementById('leadForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    //hier code zum speichern des leads in datenbank (z.b. ajax anfrage an server)
+    console.log('Lead gespeichert');
+    document.getElementById('leadModal').style.display = 'none';
+});
+});
