@@ -43,8 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
             label: 'Earnings',
             data: [2000, 1500, 1200, 1300, 2400, 1500, 1800, 1900, 1700, 2100, 2000, 1800],
             fill: false,
-            borderColor: 'rgb(75, 192, 192)',
-            tension: 0.1
+            borderColor: 'rgb(0,123,255)',
+            //borderColor: 'rgb(75, 192, 192)',
+            tension: 0.4
         }]
     };
 
@@ -64,6 +65,73 @@ document.addEventListener('DOMContentLoaded', function () {
         options: chartOptions
     });
 });
+
+/*
+Chart.defaults.roundedLine = Chart.helpers.clone(Chart.defaults.line);
+
+Chart.controllers.roundedLine = Chart.controllers.line.extend({
+    draw: function(ease) {
+        Chart.controllers.line.prototype.draw.call(this, ease);
+
+        var ctx = this.chart.chart.ctx;
+        var meta = this.getMeta();
+
+        if (!meta.dataset._path) {
+            meta.dataset._path = [];
+        }
+
+        meta.dataset._path = meta.dataset._path.map(function (path, i) {
+            if (i === 0) {
+                return path;
+            }
+            var prev = meta.dataset._path[i - 1];
+            var xc = (prev.controlPointNextX + path.x) / 2;
+            var yc = (prev.controlPointNextY + path.y) / 2;
+            return {x: xc, y: yc};
+        });
+
+        meta.dataset._path.forEach(function(path, i) {
+            if (i === 0) {
+                ctx.moveTo(path.x, path.y);
+            } else {
+                var prev = meta.dataset._path[i - 1];
+                var xc = (prev.x + path.x) / 2;
+                var yc = (prev.y + path.y) / 2;
+                ctx.quadraticCurveTo(prev.x, prev.y, xc, yc);
+            }
+        });
+
+        ctx.lineWidth = this.getDataset().lineWidth || this.chart.options.elements.line.borderWidth;
+        ctx.strokeStyle = this.getDataset().borderColor;
+        ctx.stroke();
+    }
+});
+
+var ctx = document.getElementById("earningChart").getContext("2d");
+var earningChart = new Chart(ctx, {
+    type: 'roundedLine',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        datasets: [{
+            label: 'Sales',
+            data: [2000, 1500, 1200, 1300, 2400, 1500, 1800, 1900, 1700, 2100, 2000, 1800],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+*/
+
 
 document.addEventListener('DOMContentLoaded', function () {
 document.getElementById('openLeadFormBtn').addEventListener('click', function () {
