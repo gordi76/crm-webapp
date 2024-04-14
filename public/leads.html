@@ -44,11 +44,17 @@
     <div id="leadModal" class="modal">
         <div id="modal-content">
             <span class="close">&times</span>
-            <form id="leadForm">
-                <label for="firstName">Vorname:</label>
-                <input type="text" id="firstName" name="firstName" required>
-                <label for="lastName">Nachname:</label>
-                <input type="text" id="lastName" name="lastName" required>
+            <form id="leadForm" action="index.php" method="post">
+                <label for="first_name">Vorname:</label>
+                <input type="text" id="first_name" name="firstName" required>
+                <label for="last_name">Nachname:</label>
+                <input type="text" id="last_name" name="lastName" required>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+                <label for="phone">Telefonnummer:</label>
+                <input type="number" id="phone" name="phone">
+                <label for="company">Firma:</label>
+                <input type="text" id="company" name="company" required>
 
                 <!-- weitermachen -->
 
@@ -56,6 +62,8 @@
             </form>
         </div>
     </div>
+
+
 
 </main>
 

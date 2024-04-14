@@ -144,6 +144,13 @@ document.getElementsByClassName('close')[0].addEventListener('click', function (
 
 document.getElementById('leadForm').addEventListener('submit', function (event) {
     event.preventDefault();
+    console.log('Form submitted');
+
+    var formData = new FormData(this);
+
+    for (var pair of formData.entries()) {
+        console.log(pair[0] + ': ' + pair[1]);
+    }
     //hier code zum speichern des leads in datenbank (z.b. ajax anfrage an server)
     console.log('Lead gespeichert');
     document.getElementById('leadModal').style.display = 'none';
