@@ -1,6 +1,9 @@
 <?php
 
-if($_SERVER["REQUEST_METHOD"] === "POST") {
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] === "POST") {
     $servername = "localhost";
     $username = "root";
     $password = "crmdashboard";
@@ -23,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $stmt = $conn->prepare($sql);
 
-        $stmt->bind_param("ssss", $first_name, $last_name, $email, $phone, $company);
+        $stmt->bind_param("sssss", $first_name, $last_name, $email, $phone, $company);
 
         $stmt->execute();
 

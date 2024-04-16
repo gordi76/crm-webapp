@@ -13,7 +13,15 @@ if ($conn->connect_error) {
 }
 
 $sql = ('SELECT * FROM crm_database.leads');
+//$sql = ("INSERT INTO crm_database.leads (first_name, last_name, email, phone, company) values ('Dennis', 'Gordeev', 'dennis@example.com', '+49 176 1234567', 'ABC Inc.');");
 $result = $conn->query($sql);
+/*
+if($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+*/
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
