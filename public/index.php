@@ -22,6 +22,9 @@ if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] === "POST") {
         $phone = $_POST["phone"];
         $company = $_POST["company"];
 
+        var_dump($_POST);
+        var_dump($_SERVER);
+
         $sql = "INSERT INTO crm_database.leads (first_name, last_name, email, phone, company) VALUES (?, ?, ?, ?, ?)";
 
         $stmt = $conn->prepare($sql);

@@ -6,7 +6,7 @@ $password = "crmdashboard";
 $dbname = "crm_database";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
-echo "connected";
+echo "connected ";
 
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);

@@ -151,7 +151,7 @@ document.getElementById('leadForm').addEventListener('submit', function (event) 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "index.php", true);
 
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    //xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
     xhr.onload = function() {
         if (xhr.status === 200) {
