@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <title>CRM-Dashboard</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts/script.js"></script>
 </head>
 <body>
     <header>
         <!--  -->
     </header>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="scripts/script.js"></script>
     <div class="top-bar">
         <div class="menu-toggle" onclick="toggleMenu()">&#9776</div>
-        <div class="title">CRM-Dashboard</div>
+        <div class="title"><a href="index.html">CRM-Dashboard</a></div>
         <div class="profile-link"><a href="#" id="profileLink">Mein Profil</a></div>
     </div>
 
@@ -29,13 +30,12 @@
     <div class="sidebar">
         <ul>
             <input type="text" placeholder="Search..." id="searchInput">
-            <li><a href="#">Startseite</a></li>
-            <li><a href="#">Kunden</a></li>
-            <!--<li><a href="#" onclick="window.location.href='leads.html'; return false;">Leads</a></li>-->
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="customer.html">Kunden</a></li>
             <li><a href="leads.html">Leads</a></li>
-            <li><a href="#">Angebote</a></li>
-            <li><a href="#">Aufträge</a></li>
-            <li><a href="#">Kalender</a></li>
+            <li><a href="orderquotation.html">Angebote</a></li>
+            <li><a href="customerorder.html">Aufträge</a></li>
+            <li><a href="calender.html">Kalender</a></li>
         </ul>
     </div>
 
@@ -63,11 +63,10 @@
 
         <div class="leads">
             <h2>Leads</h2>
-            <ul id="leadsList">
-                <li>Vorname Nachname</li>
-                <li>Vorname Nachname</li>
-            </ul>
+            <table id="leadsList">
+            </table>
         </div>
+
     </main>
 
     <footer>
