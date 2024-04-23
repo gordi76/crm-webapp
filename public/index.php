@@ -43,12 +43,4 @@ if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] === "POST") {
 else {
     echo "Keine POST-Anfrage erhalten";
 }
-
-//$sql = "SELECT * FROM crm_database.leads";
-//$result = $conn->query($sql);
-
-//if(!$result) {
-//echo "Fehler beim Aufrufen der Leads: " . $conn->error;
-//}
-
 ?>

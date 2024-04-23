@@ -83,6 +83,16 @@ body {
     box-sizing: border-box;
 }
 
+.top-bar .title a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.top-bar .title a:hover {
+    color: #cccccc;
+}
+
 .sales {
     display: flex;
     flex-wrap: wrap;
@@ -216,6 +226,23 @@ body {
     cursor: pointer;
 }
 
+.new-lead-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 20px 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 20px auto;
+}
+
+.new-lead-button:hover {
+    background-color: #0056b3;
+}
+
 #leadForm label {
     display: block;
     margin-bottom: 10px;
@@ -230,7 +257,7 @@ body {
 }
 
 #leadForm button[type="submit"] {
-    background-color: #333;
+    background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -239,11 +266,11 @@ body {
 }
 
 #leadForm button[type="submit"]:hover {
-    background-color: #555;
+    background-color: #0056b3;
 }
 
 .leads {
-    height: 250px;
+    height: auto;
     width: 875px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
@@ -264,4 +291,53 @@ body {
 
 #leadsList li {
     margin-bottom: 10px;
+}
+
+.leads table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leads table th,
+.leads table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.leads table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+/*
+.search-icon {
+    float: left;
+    margin-right: 5px;
+    font-size: 18px;
+    color: #999;
+}
+*/
+
+.search-input {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+.search-input:focus {
+    background-color: #e0e0e0;
+}
+
+.mark {
+    background-color: yellowgreen;
+    color: black;
 }
