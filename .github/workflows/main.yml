@@ -15,5 +15,5 @@ jobs:
         username: crmwebapp
         password: ${{ secrets.ftp_password }}
         exclude: "[**/.idea/**, **/node_modules/**, **/build/, .README.MD, .gitignore, **/.git*/**]"
-        dry-run: true
+#        dry-run: true
 
