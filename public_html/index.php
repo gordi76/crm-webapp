@@ -5,9 +5,9 @@ ini_set('display_errors', 1);
 
 if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] === "POST") {
     $servername = "localhost";
-    $username = "root";
-    $password = "crmdashboard";
-    $dbname = "crm_database";
+    $username = "id22121859_root";
+    $password = "CRMdashboard$1";
+    $dbname = "id22121859_crm_database";
 
     require_once('db_connect.php');
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -25,7 +25,7 @@ if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] === "POST") {
         var_dump($_POST);
         var_dump($_SERVER);
 
-        $sql = "INSERT INTO crm_database.leads (first_name, last_name, email, phone, company) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO id22121859_crm_database.leads (first_name, last_name, email, phone, company) VALUES (?, ?, ?, ?, ?)";
 
         $stmt = $conn->prepare($sql);
 

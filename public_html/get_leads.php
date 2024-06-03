@@ -4,9 +4,9 @@
 // ini_set('display_errors', 1);
 
 $servername = "localhost";
-$username = "root";
-$password = "crmdashboard";
-$dbname = "crm_database";
+$username = "id22121859_root";
+$password = "CRMdashboard$1";
+$dbname = "id22121859_crm_database";
 
 require_once('db_connect.php');
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 
 header('Content-Type: application/json');
 
-$sql_select = "SELECT * FROM crm_database.leads";
+$sql_select = "SELECT * FROM id22121859_crm_database.leads";
 $result = $conn->query($sql_select);
 
  if($result->num_rows > 0) {
