@@ -1,0 +1,148 @@
+/*.customer-orders {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}*/
+.customer-orders {
+    height: auto;
+    width: 875px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto 10px;
+    position: relative;
+}
+
+.customer-orders h2 {
+    margin-top: 0;
+}
+
+.customer-orders table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.customer-orders table th,
+.customer-orders table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.customer-orders table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+.customer-orders form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.customer-orders form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.customer-orders form input[type="text"],
+.customer-orders form input[type="email"],
+.customer-orders form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.customer-orders form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 20px 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 20px auto;
+}
+
+.customer-orders form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#orderForm input[type="text"] {
+    width: calc(100%-20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#orderForm button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#orderForm button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#ordersList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#ordersList li {
+    margin-bottom: 10px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 50%;
+    max-width: 600px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
