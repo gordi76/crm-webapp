@@ -80,7 +80,7 @@
 }
 
 #orderForm input[type="text"] {
-    width: calc(100%-20px);
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
