@@ -79,6 +79,11 @@
     background-color: #0056b3;
 }
 
+#orderForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
 #orderForm input[type="text"] {
     width: calc(100% - 20px);
     padding: 10px;
@@ -108,7 +113,25 @@
 #ordersList li {
     margin-bottom: 10px;
 }
-.modal {
+
+.customer-orders table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.customer-orders table th,
+.customer-orders table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.customer-orders table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+/*.modal {
     display: none;
     position: fixed;
     z-index: 100;
@@ -129,7 +152,7 @@
     max-width: 600px;
     border-radius: 5px;
     position: relative;
-}
+}*/
 
 .close {
     color: #aaa;
