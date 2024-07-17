@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRM-Dashboard</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/customerorder.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="scripts/script.js"></script>
+    <script src="scripts/customerorder.js"></script>
+    <script src="scripts/getcustomerorders.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header>
+    <!--  -->
+</header>
+
+<div class="top-bar">
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776</div>
+    <div class="title"><a href="index.html">CRM-Dashboard</a></div>
+    <div class="profile-link"><a href="#" id="profileLink">Mein Profil</a></div>
+</div>
+
+<div class="dropdown-content" id="profileDropdown">
+    <ul>
+        <li><a href="#">Profil bearbeiten</a></li>
+        <li><a href="#">Sicherheitseinstellungen</a></li>
+        <li><a href="#">Abmelden</a></li>
+    </ul>
+</div>
+
+<div class="sidebar">
+    <ul>
+        <input type="text" placeholder="Search..." id="searchInput">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="customer.html">Kunden</a></li>
+        <li><a href="leads.html">Leads</a></li>
+        <li><a href="orderquotation.html">Angebote</a></li>
+        <li><a href="customerorders.html">Aufträge</a></li>
+        <li><a href="calender.html">Kalender</a></li>
+    </ul>
+</div>
+<main>
+
+    <button id="openOrderFormBtn" class="new-lead-button">Neuen Kundenauftrag erfassen</button>
+
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times</span>
+<!--            <h3>Neuen Kundenauftrag erfassen</h3>-->
+            <form id="orderForm" action="create_customer_order.php" method="post">
+                <label for="part">Artikel:</label>
+                <input type="text" id="part" name="part">
+                <label for="part_no">Artikelnummer:</label>
+                <input type="number" id="part_no" name="partNo">
+                <label for="customer">Kunde:</label>
+                <input type="text" id="customer" name="customer">
+                <label for="sales_value">Verkaufswert</label>
+                <input type="number" id="sales_value" name="salesValue">
+                <button type="submit">Auftrag erfassen</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="customer-orders">
+        <h2>Customer Orders</h2>
+        <div class="search-wrapper">
+            <input type="text" id="customerOrderSearchInput" class="search-input" placeholder="Nach Auftrag suchen">
+            <button id="searchButton">Search</button>
+        </div>
+        <table id="ordersList">
+        </table>
+    </div>
+
+</main>
+
+</body>
+</html>

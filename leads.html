@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>CRM-Dashboard</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/customerorder.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <script src="scripts/script.js"></script>
     <script src="scripts/leads.js"></script>
-    <script src="scripts/customerorder.js"></script>
+    <script src="scripts/getleads.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 <header>
@@ -43,31 +43,39 @@
 </div>
 <main>
 
-    <button id="openOrderFormBtn" class="new-lead-button">Neuen Kundenauftrag erfassen</button>
+    <button id="openLeadFormBtn" class="new-lead-button">Neuen Lead hinzufügen</button>
 
-    <div id="orderModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Neuen Kundenauftrag erfassen</h3>
-            <form id="orderForm">
-                <label for="customerName">Kunde:</label>
-                <input type="text" id="customerName" name="customerName" required><br><br>
-                <label for="orderDescription">Beschreibung:</label><br>
-                <textarea id="orderDescription" name="orderDescription" rows="4" required></textarea>
-                <button type="submit">Auftrag erfassen</button>
+    <div id="leadModal" class="modal">
+        <div id="modal-content">
+            <span class="close">&times</span>
+            <form id="leadForm" action="index.php" method="post">
+                <label for="first_name">Vorname:</label>
+                <input type="text" id="first_name" name="firstName" required>
+                <label for="last_name">Nachname:</label>
+                <input type="text" id="last_name" name="lastName" required>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+                <label for="phone">Telefonnummer:</label>
+                <input type="number" id="phone" name="phone">
+                <label for="company">Firma:</label>
+                <input type="text" id="company" name="company" required>
+                <button type="submit">Lead speichern</button>
             </form>
         </div>
     </div>
 
-    <div class="customer-orders">
-        <h2>Kundenaufträge</h2>
+    <div class="leads">
+        <h2>Leads</h2>
         <div class="search-wrapper">
-            <input type="text" id="customerOrderSearchInput" class="search-input" placeholder="Nach Lead suchen">
+            <!-- <i class="fas fa-search search-icon"></i> -->
+            <input type="text" id="leadsSearchInput" class="search-input" placeholder="Nach Lead suchen">
             <button id="searchButton">Suchen</button>
         </div>
-        <table id="ordersList">
+        <table id="leadsList">
             </table>
     </div>
+
+
 
 </main>
 
