@@ -15,17 +15,17 @@ if ($conn->connect_error) {
     die("Verbindung zur Datenbank fehlgeschlagen: " . $conn->connect_error);
 }
 
-header('Content-Type: application/json');
+header('Content-Type: application/json'); 
 
-$sql_select = "SELECT * FROM if0_36780543_crm_database.customer_orders";
+$sql_select = "SELECT * FROM if0_36780543_crm_database.order_quotation";
 $result = $conn->query($sql_select);
 
 if ($result->num_rows > 0) {
-    $orders = array();
+    $quotation = array();
     while ($row = $result->fetch_assoc()) {
-        $orders[] = $row;
+        $quotation[] = $row;
     }
-    echo json_encode($orders);
+    echo json_encode($quotation);
 } else {
     echo json_encode(array());
 }

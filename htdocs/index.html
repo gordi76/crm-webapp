@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <title>CRM-Dashboard</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/lead.css">
+    <link rel="stylesheet" href="styles/customer.css">
+    <link rel="stylesheet" href="styles/customerorder.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/getleads.js"></script>
+    <script src="scripts/getcustomer.js"></script>
+    <script src="scripts/getcustomerorders.js"></script>
 </head>
 <body>
     <header>
@@ -34,7 +40,7 @@
             <li><a href="customer.html">Kunden</a></li>
             <li><a href="leads.html">Leads</a></li>
             <li><a href="orderquotation.html">Angebote</a></li>
-            <li><a href="customerorder.html">Aufträge</a></li>
+            <li><a href="customerorders.html">Aufträge</a></li>
             <li><a href="calender.html">Kalender</a></li>
         </ul>
     </div>
@@ -64,6 +70,18 @@
         <div class="leads">
             <h2>Leads</h2>
             <table id="leadsList">
+            </table>
+        </div>
+
+        <div class="customer">
+            <h2>Kunden</h2>
+            <table id="customerList">
+            </table>
+        </div>
+
+        <div class="customer-orders">
+            <h2>Kundenaufträge</h2>
+            <table id="ordersList">
             </table>
         </div>
 

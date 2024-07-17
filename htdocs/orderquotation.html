@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>CRM-Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/quotation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <script src="scripts/leads.js"></script>
+    <script src="scripts/quotation.js"></script>
+    <script src="scripts/getquotation.js"></script>
     <script src="scripts/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -14,7 +17,7 @@
     <!--  -->
 </header>
 
-
+ 
 <div class="top-bar">
     <div class="menu-toggle" onclick="toggleMenu()">&#9776</div>
     <div class="title"><a href="index.html">CRM-Dashboard</a></div>
@@ -36,14 +39,43 @@
         <li><a href="customer.html">Kunden</a></li>
         <li><a href="leads.html">Leads</a></li>
         <li><a href="orderquotation.html">Angebote</a></li>
-        <li><a href="customerorder.html">Aufträge</a></li>
+        <li><a href="customerorders.html">Aufträge</a></li>
         <li><a href="calender.html">Kalender</a></li>
     </ul>
 </div>
+
 <main>
+    <button id="openQuotationFormBtn" class="new-lead-button">Neues Angebot erstellen</button>
 
+    <div id="quotationModal" class="modal">
+        <div id="modal-content">
+            <span class="close">&times</span>
+            <form id="quotationForm" action="create_quotation.php" method="post">
+                <label for="part">Artikel:</label>
+                <input type="text" id="part" name="part" required>
+                <label for="part_no">Artikelnummer:</label>
+                <input type="text" id="part_no" name="partNo" required>
+                <label for="customer">Kunde:</label>
+                <input type="text" id="customer" name="customer">
+                <label for="price">Preis:</label>
+                <input type="text" id="price" name="price" required>
+                <label for="address">Adresse:</label>
+                <input type="text" id="address" name="address">
+                <button type="submit">Angebot erstellen</button>
+            </form>
+        </div>
+    </div>
 
-
+    <div class="quotation">
+        <h2>Angebote</h2>
+        <div class="search-wrapper">
+            <!-- <i class="fas fa-search search-icon"></i> -->
+            <input type="text" id="quotationSearchInput" class="search-input" placeholder="Nach Angebot suchen">
+            <button id="searchButton">Suchen</button>
+        </div>
+        <table id="quotationList">
+            </table>
+    </div>
 
 </main>
 

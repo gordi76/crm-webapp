@@ -17,15 +17,15 @@ if ($conn->connect_error) {
 
 header('Content-Type: application/json');
 
-$sql_select = "SELECT * FROM if0_36780543_crm_database.customer_orders";
+$sql_select = "SELECT * FROM if0_36780543_crm_database.customer";
 $result = $conn->query($sql_select);
 
 if ($result->num_rows > 0) {
-    $orders = array();
+    $customer = array();
     while ($row = $result->fetch_assoc()) {
-        $orders[] = $row;
+        $customer[] = $row;
     }
-    echo json_encode($orders);
+    echo json_encode($customer);
 } else {
     echo json_encode(array());
 }

@@ -48,12 +48,12 @@
     background-color: #0056b3;
 }
 
-#orderForm label {
+#quotationForm label {
     display: block;
     margin-bottom: 10px;
 }
 
-#orderForm input[type="text"] {
+#quotationForm input[type="text"] {
     width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 20px;
@@ -61,7 +61,7 @@
     border-radius: 5px;
 }
 
-#orderForm button[type="submit"] {
+#quotationForm button[type="submit"] {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -70,11 +70,11 @@
     cursor: pointer;
 }
 
-#orderForm button[type="submit"]:hover {
+#quotationForm button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-.customer-orders {
+.quotation {
     height: auto;
     width: 875px;
     background-color: #f0f0f0;
@@ -85,32 +85,32 @@
     position: relative;
 }
 
-.customer-orders h2 {
+.quotation h2 {
     margin-top: 0;
 }
 
-#ordersList {
+#quotationList {
     list-style-type: none;
     padding: 0;
 }
 
-#ordersList li {
+#quotationList li {
     margin-bottom: 10px;
 }
 
-.customer-orders table {
+.quotation table {
     width: 100%;
     border-collapse: collapse;
 }
 
-.customer-orders table th,
-.customer-orders table td {
+.quotation table th,
+.quotation table td {
     padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
 }
 
-.customer-orders table th {
+.quotation table th {
     background-color: #f1f1f1;
     font-weight: bold;
 }

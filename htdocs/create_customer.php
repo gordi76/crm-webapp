@@ -16,26 +16,27 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] === "POST") 
         die("Verbindung zur Datenbank fehlgeschlagen: " . $conn->connect_error);
     }
 
-    $part = $_POST["part"];
-    $part_no = $_POST["partNo"];
-    $customer = $_POST["customer"];
-    $sales_value = $_POST["salesValue"];
+    $company = $_POST["company"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $contact = $_POST["contact"];
+    $address = $_POST["address"];
 
     var_dump($_POST);
     var_dump($_SERVER);
 
-    $sql = "INSERT INTO if0_36780543_crm_database.customer_orders (part, part_no, customer, sales_value) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO if0_36780543_crm_database.customer (company, email, phone, contact, address) VALUES (?, ?, ?, ?, ?)";
 
     $stmt = $conn->prepare($sql);
 
-    $stmt->bind_param("ssss", $part, $part_no, $customer, $sales_value);
-    
+    $stmt->bind_param("sssss", $company, $email, $phone, $contact, $address);
+
     $stmt->execute();
 
     if ($stmt->error) {
-        echo "Fehler beim Erstellen der Bestellung: " . $stmt->error;
+        echo "Fehler beim Erfassen des Kunden: " . $stmt->error;
     } else {
-        echo "Bestellung erfolgreich erfasst!";
+        echo "Kunde erfolgreich erfasst!";
     }
     $stmt->close();
 } else {
