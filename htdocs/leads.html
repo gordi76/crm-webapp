@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>CRM-Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/lead.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="scripts/leads.js"></script>
+    <script src="scripts/getleads.js"></script>
     <script src="scripts/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -36,7 +39,7 @@
         <li><a href="customer.html">Kunden</a></li>
         <li><a href="leads.html">Leads</a></li>
         <li><a href="orderquotation.html">Angebote</a></li>
-        <li><a href="customerorder.html">Aufträge</a></li>
+        <li><a href="customerorders.html">Aufträge</a></li>
         <li><a href="calender.html">Kalender</a></li>
     </ul>
 </div>
@@ -58,8 +61,6 @@
                 <input type="number" id="phone" name="phone">
                 <label for="company">Firma:</label>
                 <input type="text" id="company" name="company" required>
-
-                <!-- weitermachen -->
                 <button type="submit">Lead speichern</button>
             </form>
         </div>
@@ -68,7 +69,8 @@
     <div class="leads">
         <h2>Leads</h2>
         <div class="search-wrapper">
-            <!-- <i class="fas fa-search search-icon"></i> --><input type="text" id="leadsSearchInput" class="search-input" placeholder="Nach Lead suchen">
+            <!-- <i class="fas fa-search search-icon"></i> -->
+            <input type="text" id="leadsSearchInput" class="search-input" placeholder="Nach Lead suchen">
             <button id="searchButton">Suchen</button>
         </div>
         <table id="leadsList">

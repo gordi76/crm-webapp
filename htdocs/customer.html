@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>CRM-Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/customer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <script src="scripts/leads.js"></script>
+    <script src="scripts/customer.js"></script>
+    <script src="scripts/getcustomer.js"></script>
     <script src="scripts/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -14,7 +17,7 @@
     <!--  -->
 </header>
 
-
+ 
 <div class="top-bar">
     <div class="menu-toggle" onclick="toggleMenu()">&#9776</div>
     <div class="title"><a href="index.html">CRM-Dashboard</a></div>
@@ -36,14 +39,43 @@
         <li><a href="customer.html">Kunden</a></li>
         <li><a href="leads.html">Leads</a></li>
         <li><a href="orderquotation.html">Angebote</a></li>
-        <li><a href="customerorder.html">Aufträge</a></li>
+        <li><a href="customerorders.html">Aufträge</a></li>
         <li><a href="calender.html">Kalender</a></li>
     </ul>
 </div>
+
 <main>
+    <button id="openCustomerFormBtn" class="new-lead-button">Neuen Kunden erfassen</button>
 
+    <div id="customerModal" class="modal">
+        <div id="modal-content">
+            <span class="close">&times</span>
+            <form id="customerForm" action="create_customer.php" method="post">
+                <label for="company">Firma:</label>
+                <input type="text" id="company" name="company" required>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+                <label for="phone">Telefonnummer:</label>
+                <input type="text" id="phone" name="phone">
+                <label for="contact">Kontakt:</label>
+                <input type="text" id="contact" name="contact" required>
+                <label for="address">Adresse:</label>
+                <input type="text" id="address" name="address">
+                <button type="submit">Kunde erfassen</button>
+            </form>
+        </div>
+    </div>
 
-
+    <div class="customer">
+        <h2>Customer</h2>
+        <div class="search-wrapper">
+            <!-- <i class="fas fa-search search-icon"></i> -->
+            <input type="text" id="customerSearchInput" class="search-input" placeholder="Nach Kunde suchen">
+            <button id="searchButton">Suchen</button>
+        </div>
+        <table id="customerList">
+            </table>
+    </div>
 
 </main>
 

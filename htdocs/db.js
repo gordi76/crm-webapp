@@ -1,7 +1,7 @@
 const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
-    host: 'localhost',
+    host: 'localhostel',
     user: 'root',
     database: 'crm_database',
     password: 'crmdashboard'
