@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CRM-Dashboard</title>
+    <title>Mein Profil</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="scripts/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -13,7 +14,6 @@
 <header>
     <!--  -->
 </header>
-
 
 <div class="top-bar">
     <div class="menu-toggle" onclick="toggleMenu()">&#9776</div>
@@ -40,12 +40,31 @@
         <li><a href="calender.html">Kalender</a></li>
     </ul>
 </div>
-<main>
 
-
-
-
-</main>
+<div class="profile-main">
+    <div class="profile-container">
+        <div class="profile-content">
+            <div class="profile-picture">
+                <img id="profileImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy2_QxkDEgr-opEDGo5peZZMw19dHwrz0gBw&s" alt="Profile Picture">
+            </div>
+            <div class="profile-info">
+                <h2>Max Mustermann</h2>
+                <p>Email: max.mustermann@example.com</p>
+                <p>Phone: +1234567890</p>
+                <!-- Weitere Profilinformationen hier einfügen -->
+            </div>
+        </div>
+        <div class="profile-sidebar">
+            <ul>
+                <li><a href="#">Sicherheitseinstellungen</a></li>
+                <li><a href="#">Passwort zurücksetzen</a></li>
+                <li><a href="#">Aktivitätsprotokoll</a></li>
+                <li><a href="#">Zwei-Faktor-Authentifizierung</a></li>
+                <li><a href="#">Benachrichtigungen</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
