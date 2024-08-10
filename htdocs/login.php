@@ -16,12 +16,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->fetch();
         
         if (password_verify($password, $password_hash)) {
-            echo "<h1>Login erfolgreich</h1>";
+            header("Location: index.html");
+            exit();
         } else {
-            echo "<h1>Login nicht erfolgreich</h1>";
+            header("Location: login.html?error=1");
+            exit();
         }
     } else {
-        echo "<h1>Login nicht erfolgreich</h1>";
+        header("Location: login.html?error=1");
+            exit();
     }
 
     $stmt->close();

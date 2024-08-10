@@ -5,6 +5,14 @@
     <title>CRM-Dashboard</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/login.js" defer></script>
+    <style>
+        #error-message {
+            color: red;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="login-container">
@@ -12,6 +20,9 @@
         <form action="login.php" method="post">
             <input type="text" name="username" placeholder="Benutzername" required>
             <input type="password" name="password" placeholder="Passwort" required>
+            <div id="error-message" style="display: none;">
+                <p>Falscher Benutzername oder Passwort. Bitte versuche es erneut.</p>
+            </div>
             <button type="submit">Anmelden</button>
         </form>
     </div>
