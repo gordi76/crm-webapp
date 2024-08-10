@@ -1,3 +1,11 @@
+RewriteEngine On
+RewriteRule ^customer\.html$ /customerProtected.php [R=301,L]
+RewriteRule ^leads\.html$ /leadsProtected.php [R=301,L]
+RewriteRule ^calender\.html$ /calenderProtected.php [R=301,L]
+RewriteRule ^customerorders\.html$ /customerordersProtected.php [R=301,L]
+RewriteRule ^my_profile\.html$ /my_profileProtected.php [R=301,L]
+RewriteRule ^orderquotation\.html$ /orderquotationProtected.php [R=301,L]
+
 DirectoryIndex index.html index.php index.htm index2.html
 
 ErrorDocument 403 https://errors.infinityfree.net/errors/403/

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'db_connect.php';
 
 
@@ -16,7 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->fetch();
         
         if (password_verify($password, $password_hash)) {
-            header("Location: index.html");
+            $_SESSION['loggedin'] = true;
+            $_SESSION['username'] = $username;
+            header("Location: indexProtected.php");
             exit();
         } else {
             header("Location: login.html?error=1");
