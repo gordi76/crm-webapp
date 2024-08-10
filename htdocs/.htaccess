@@ -12,3 +12,9 @@ ErrorDocument 403 https://errors.infinityfree.net/errors/403/
 ErrorDocument 404 https://errors.infinityfree.net/errors/404/
 ErrorDocument 500 https://errors.infinityfree.net/errors/500/
 php_value date.timezone Europe/Berlin
+
+<IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+</IfModule>
